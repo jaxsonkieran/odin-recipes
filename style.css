@@ -64,6 +64,57 @@ nav a:hover {
     width: 100%;
 }
 
+.banner-area-curry {
+    background-image: url(./images/currygreen.jpg);
+    background-size: cover;
+    background-position: center center;
+    top: 100px;
+    height: 100vh;
+    width:100%;
+}
+
+.banner-area-curry h1 {
+    padding-top: 25%;
+    font-size: 35px;
+    font-family: 'Courier Prime', monospace;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    
+}
+.banner-area-granola {
+    background-image: url(./images/granola.jpg);
+    background-size: cover;
+    background-position: center center;
+    top: 100px;
+    height: 100vh;
+    width:100%;
+}
+
+.banner-area-granola h1 {
+    padding-top: 25%;
+    font-size: 35px;
+    font-family: 'Courier Prime', monospace;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+.banner-area-lasagna {
+    background-image: url(./images/lasagne.jpg);
+    background-size: cover;
+    background-position: center center;
+    top: 100px;
+    height: 100vh;
+    width:100%;
+}
+
+.banner-area-lasagna h1 {
+    padding-top: 25%;
+    font-size: 35px;
+    font-family: 'Courier Prime', monospace;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
 .banner-area-home h1 {
     padding-top: 25%;
     font-size: 35px;
@@ -71,3 +122,5 @@ nav a:hover {
     color: white;
     text-shadow: 1px 1px 1px black;
 }
+
+
