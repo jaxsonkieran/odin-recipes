@@ -123,4 +123,15 @@ nav a:hover {
     text-shadow: 1px 1px 1px black;
 }
 
+.image {
+    margin-top: 100px;
+}
+
+img:hover {
+    opacity: 0.8;
+}
+
+
+
+
 
