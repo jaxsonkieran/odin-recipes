@@ -123,12 +123,19 @@ nav a:hover {
     text-shadow: 1px 1px 1px black;
 }
 
-.image {
-    margin-top: 100px;
+div.content-area h2  {
+    margin: 50px auto 10px;
+    font-family: 'Courier Prime', monospace;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.image{
+    margin-top: 25px;
 }
 
 img:hover {
-    opacity: 0.8;
+    scale: 1.1;
 }
 
 
