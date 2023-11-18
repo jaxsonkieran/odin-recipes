@@ -1,144 +1,152 @@
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
-
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
 }
 
-body {
-    font-family: 'Courier Prime', monospace;
-    text-align: center;
+h1 {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+    color:#FFF6E7;
 }
 
-.wrapper {
-    width:90%;
-    margin: 0 auto;
+.content {
+    height: 100vh;
+    place-items: center;
+    background-color: #FFF6E7;
+    background-image: url(./images/baker.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+    display: grid;
 }
 
 header {
-    width: 100%;
-    height: 100px;
-    background-color: rgb(255, 0, 157);
-    font-family: 'Courier Prime', monospace;
+    background-color: #004D3D;
+    text-align: center;
     position: fixed;
+    z-index: 999;
+    width: 100%;
 }
 
-.logo {
-    float: left;
-    text-align: left;
-    line-height: 100px;
-    width: 30%;
+.nav-toggle {
+    display: none;
 }
 
-.logo a {
-    text-decoration: none;
-    font-family: 'Courier Prime', monospace;
-    font-size: 20px;
-    color: white;
+.nav-toggle-label {
+    position: absolute;
+    top:0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
 }
 
 nav {
-    float: right;
-    line-height: 100px;
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background-color: #004D3D;
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
 }
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
 nav a {
-    color: white;
-    font-family: 'Courier Prime', monospace;
-    font-size: 15px;
-    font-weight: light;
-    padding: 36px 10px;
-    margin: 0 1px;  
+    font-weight: 200;
+    color: #FFF6E7;
+    text-decoration: none;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
 }
 
 nav a:hover {
-    background-color: white;
-    color: black;
+    color: #86B649;
 }
 
-.banner-area-home {
-    background-image: url(./images/baker.jpg);
-    background-size: cover;
-    background-position: center center;
-    top: 100px;
-    height: 100vh;
-    width: 100%;
+.nav-toggle:checked ~ nav {
+  transform: scale(1,1);
 }
 
-.banner-area-curry {
-    background-image: url(./images/currygreen.jpg);
-    background-size: cover;
-    background-position: center center;
-    top: 100px;
-    height: 100vh;
-    width:100%;
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
 }
 
-.banner-area-curry h1 {
-    padding-top: 25%;
-    font-size: 35px;
-    font-family: 'Courier Prime', monospace;
-    color: white;
-    text-shadow: 1px 1px 1px black;
-    
+@media screen and (min-width: 790px) {
+    .nav-toggle-label {
+        display: none;
+    }
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    }
+
+    .logo {
+        grid-column: 2 /  3;
+    }
+
+    nav {
+        all: unset;
+        grid-column: 3 /  4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+    }
+    nav ul {
+        display: flex;
+
+    }
+
+    nav a { 
+        opacity: 1;
+        position: relative;
+    }
+
+    nav li {
+        margin-bottom: 0;
+        margin-left: 3em;
+    }
+
 }
-.banner-area-granola {
-    background-image: url(./images/granola.jpg);
-    background-size: cover;
-    background-position: center center;
-    top: 100px;
-    height: 100vh;
-    width:100%;
-}
-
-.banner-area-granola h1 {
-    padding-top: 25%;
-    font-size: 35px;
-    font-family: 'Courier Prime', monospace;
-    color: white;
-    text-shadow: 1px 1px 1px black;
-}
-
-.banner-area-lasagna {
-    background-image: url(./images/lasagne.jpg);
-    background-size: cover;
-    background-position: center center;
-    top: 100px;
-    height: 100vh;
-    width:100%;
-}
-
-.banner-area-lasagna h1 {
-    padding-top: 25%;
-    font-size: 35px;
-    font-family: 'Courier Prime', monospace;
-    color: white;
-    text-shadow: 1px 1px 1px black;
-}
-
-.banner-area-home h1 {
-    padding-top: 25%;
-    font-size: 35px;
-    font-family: 'Courier Prime', monospace;
-    color: white;
-    text-shadow: 1px 1px 1px black;
-}
-
-div.content-area h2  {
-    margin: 50px auto 10px;
-    font-family: 'Courier Prime', monospace;
-    font-size: 26px;
-    font-weight: 500;
-}
-
-.image{
-    margin-top: 25px;
-}
-
-img:hover {
-    scale: 1.1;
-}
-
-
-
-
-
